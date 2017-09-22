@@ -5,21 +5,21 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var validIssueStatus = {
-  New: true,
-  Open: true,
+  New     : true,
+  Open    : true,
   Assigned: true,
-  Fixed: true,
+  Fixed   : true,
   Verified: true,
-  Closed: true
-};
+  Closed  : true
+};  
 
 var issueFieldType = {
-  status: 'required',
-  owner: 'required',
-  effort: 'optional',
-  created: 'required',
+  status        : 'required',
+  owner         : 'required',
+  effort        : 'optional',
+  created       : 'required',
   completionDate: 'optional',
-  title: 'required'
+  title         : 'required'
 };
 
 function validateIssue(issue) {

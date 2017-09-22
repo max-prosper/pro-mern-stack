@@ -3,7 +3,7 @@ const webpack = require('webpack');
 module.exports = {
   entry: {
     app: ['./src/app.jsx'],
-    vendor: ['react', 'react-dom', 'whatwg-fetch'],
+    vendor: ['react', 'react-dom', 'whatwg-fetch', 'react-router'],
   },
   output: {
     path: __dirname + '/static',
@@ -15,8 +15,9 @@ module.exports = {
     proxy: {
       '/api/*': {
         target: 'http://localhost:3000'
-      }
-    }
+      },
+    },
+    historyApiFallback: true,
   },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js'})
